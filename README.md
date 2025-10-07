@@ -21,22 +21,24 @@ A small Flutter app implementing:
    flutter run
    ```
 
-## Build a working APK
+**Or use the setup script (Windows):**
+```powershell
+.\setup.ps1
+```
 
-Debug APK:
+## Build Android APK
+
+**Quick build using script (Windows):**
+```powershell
+.\build_apk.ps1
+```
+
+**Manual build:**
 ```bash
 flutter build apk --debug
 ```
 
-Release APK (unsigned debug signing used in gradle by default in this template; for production, create a keystore and configure signing):
-```bash
-flutter build apk --release
-```
-
-The built APK will be at:
-```
-build/app/outputs/flutter-apk/app-release.apk
-```
+The APK will be located at: `android\app\build\outputs\flutter-apk\app-debug.apk`
 
 ## Project structure
 

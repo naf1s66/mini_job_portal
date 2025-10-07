@@ -1,12 +1,22 @@
 plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'dev.flutter.flutter-gradle-plugin'
+    id "com.android.application"
+    id "org.jetbrains.kotlin.android"
+    id "dev.flutter.flutter-gradle-plugin"
 }
 
 android {
     namespace "com.example.job_portal"
     compileSdk 34
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    
     defaultConfig {
         applicationId "com.example.job_portal"
         minSdk 21
@@ -15,6 +25,7 @@ android {
         versionName "1.0.0"
         multiDexEnabled true
     }
+    
     buildTypes {
         release {
             signingConfig signingConfigs.debug
@@ -29,4 +40,17 @@ android {
 
 flutter {
     source '../..'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.24"
+    
+    // Explicitly add Flutter embedding dependencies to fix Kotlin compilation
+    debugImplementation "io.flutter:flutter_embedding_debug:1.0.0-72f2b18bb094f92f62a3113a8075240ebb59affa"
+    releaseImplementation "io.flutter:flutter_embedding_release:1.0.0-72f2b18bb094f92f62a3113a8075240ebb59affa"
+    
+    // Add Android dependencies that Flutter needs
+    implementation "androidx.core:core-ktx:1.10.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
+    implementation "androidx.activity:activity:1.7.2"
 }
