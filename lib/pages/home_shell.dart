@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../services/auth_service.dart';
-import '../services/storage_service.dart';
 import 'job_list_page.dart';
 import 'saved_jobs_page.dart';
 import 'profile_page.dart';
