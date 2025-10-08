@@ -10,7 +10,7 @@ A small Flutter app implementing:
 - Sidebar (Drawer) + top bar with avatar and logout
 - Bottom navigation for quick access
 
-> ⚠️ Auth here is **demo only** (hashing with SHA-256, stored locally). Do **not** use as-is for production.
+> ⚠️ Auth here is **demo only** (hashing with SHA-256, stored locally).
 
 ## How to run
 
@@ -21,17 +21,7 @@ A small Flutter app implementing:
    flutter run
    ```
 
-**Or use the setup script (Windows):**
-```powershell
-.\setup.ps1
-```
-
 ## Build Android APK
-
-**Quick build using script (Windows):**
-```powershell
-.\build_apk.ps1
-```
 
 **Manual build:**
 ```bash
@@ -70,4 +60,3 @@ lib/
 - Tapping **Apply** saves the job into local storage (Hive). It also appears under **Saved Jobs**.
 - Logout is implemented in the avatar menu and in the drawer.
 
-Enjoy hacking! 🎯
